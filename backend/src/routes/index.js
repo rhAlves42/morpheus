@@ -2,11 +2,8 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')
 
-/* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' })
-})
 router.get('/names', (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
   let file = fs.readFileSync('nomes.txt', 'utf8')
   let names = file.split('\n')
   res.status(200).json(names)
