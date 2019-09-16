@@ -1,30 +1,33 @@
 import React from 'react';
 import axios from 'axios';
-import { List, Avatar } from 'antd';
 
-let data = [];
+
 class NamesList extends React.Component {
+
+  state = {
+    names:[]
+  }
+
   componentDidMount(){
     axios.get('http://127.0.0.1:3300/names')
     .then(res => {
-      data = JSON.stringify(res.data)
-      console.log(data);
+      this.setState({
+        names: res.data
+      });
+      console.log(this.state.names);
     })
+
   }
-  render() {
+  renderName (name){
     return (
-      <List
-        itemLayout="horizontal"
-        dataSource={data}
-        renderItem={item => (
-          <List.Item>
-            <List.Item.Meta
-              avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title={<a>"teste"</a>}
-            />
-          </List.Item>
-        )}
-      />
+      <p key={name}>{name}</p>
+    );
+  }
+
+  render() {
+    let name = this.state.names
+    return (
+      <div>{name.map(this.renderName)}</div>
     );
   }
 }
