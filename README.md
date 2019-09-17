@@ -3,7 +3,8 @@
 
 ## Instalação
   **Nessa instalação estou levando em conta que você já tenha o nodejs
-  instalado em seu computador.**
+  instalado em seu computador.
+  Caso não o tenha instalado em seu compudador siga este [tutorial](https://codeburst.io/installing-reactjs-and-creating-your-first-application-d437706498ed) __ele me salvou__**
 
   Depois de clonar o projeto, em sua maquina entre na pasta backend/src e
   rode o comando ``` npm install ```
