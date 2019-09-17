@@ -3,7 +3,7 @@ const router = express.Router()
 const cors = require('cors')
 const fs = require('fs')
 
-//* WARNING: *//
+
 function writeFile(name) {
   fs.appendFileSync('nomes.txt', name, 'utf8');
 }
