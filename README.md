@@ -2,8 +2,8 @@
   Projeto feito em nodejs & reactjs com o fundamento de ler e inserir dados apartir de um aquivo ".txt"
 
 ## Instalação
-  **Nessa instalação estou levando em conta que você já tenha o nodejs e o reactjs
-  instalados em seu computador.**
+  **Nessa instalação estou levando em conta que você já tenha o nodejs
+  instalado em seu computador.**
 
   Depois de clonar o projeto, em sua maquina entre na pasta backend/src e
   rode o comando ``` npm install ```
