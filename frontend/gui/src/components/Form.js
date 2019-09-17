@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import { Form, Input, Button } from 'antd';
-import NamesListView from '../containers/NamesListView'
 
 class CustomForm extends React.Component {
   state = {
