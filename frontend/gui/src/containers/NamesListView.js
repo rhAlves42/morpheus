@@ -3,11 +3,9 @@ import axios from 'axios';
 
 
 class NamesList extends React.Component {
-
   state = {
     names:[]
   }
-
   componentDidMount(){
     axios.get('http://127.0.0.1:3300/names')
     .then(res => {
@@ -16,18 +14,21 @@ class NamesList extends React.Component {
       });
       console.log(this.state.names);
     })
-
   }
+
+
   renderName (name){
     return (
       <p key={name}>{name}</p>
     );
   }
-
   render() {
     let name = this.state.names
     return (
-      <div>{name.map(this.renderName)}</div>
+      <div>
+        <hr></hr>
+        {name.map(this.renderName)}
+      </div>
     );
   }
 }
